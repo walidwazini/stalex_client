@@ -7,7 +7,7 @@ import './index.css';
 import App from './App';
 
 const history = createBrowserHistory({ window })
-console.log(history)
+// console.log(history)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
