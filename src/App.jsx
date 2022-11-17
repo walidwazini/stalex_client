@@ -1,10 +1,17 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import ErrorPage from "./pages/ErrorPage";
 
 const App = () => {
   return (
-    <div className='h-screen bg-slate-700 '>
-      <h1 className='text-3xl font-bold underline text-blue-500 '>Stalex</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/login' element={<LoginPage />} />
+      <Route path='*' element={<ErrorPage />} />
+    </Routes>
   );
 };
 
