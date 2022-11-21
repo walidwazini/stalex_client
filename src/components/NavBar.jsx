@@ -3,12 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
 
-const menus = [
-  { id: "m1", title: "Men", link: "/" },
-  { id: "m2", title: "Women", link: "/" },
-  { id: "m3", title: "Kids", link: "/" },
-  { id: "m4", title: "Gifts 🎁", link: "/" },
-];
+import { menus } from "../dummyData";
 
 const NavBar = () => {
   return (
@@ -39,14 +34,29 @@ const NavBar = () => {
         <div className={`basis-[30%]`}>Logo</div>
         <div className={`basis-[40%] px-1 flex justify-evenly items-center  `}>
           {menus.map((menu) => (
-            <div key={menu.id}>{menu.title}</div>
+            <div
+              className={`dropdown dropdown-hover hover:cursor-pointer`}
+              key={menu.id}
+            >
+              <div tabIndex={0}>{menu.title}</div>
+              <ul
+                tabIndex={0}
+                className={`dropdown-content menu p-2 shadow-md rounded-md w-44 bg-slate-900`}
+              >
+                {menu.submenus.map((submenu) => (
+                  <li key={submenu.id} className={`p-2 hover:bg-slate-700`}>
+                    {submenu.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
         <div className={`basis-[30%] flex justify-between `}>
           <div className='basis-2/3 flex items-center justify-center '>
             <input
               placeholder='Search'
-              className='text-slate-400 p-2 rounded-lg'
+              className={`bg-slate-300 selection:bg-red-300 text-slate-400 p-2 rounded-lg`}
             />
           </div>
           <div className='basis-1/3  text-2xl flex justify-evenly items-center'>
