@@ -1,10 +1,10 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const BannerOne = () => {
+const BannerTwo = () => {
   return (
     <section
-      className={`relative bg-puma-1 bg-cover bg-center bg-no-repeat w-full h-[800px] `}
+      className={`relative bg-adidas-1 bg-cover bg-center bg-no-repeat w-full h-[800px] `}
     >
       <div className='absolute inset-0 bg-white/30 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/25 sm:to-white/30'></div>
 
@@ -12,11 +12,11 @@ const BannerOne = () => {
         className={`relative mx-auto px-4 py-32 
       sm:px-6 lg:flex lg:h-full lg:items-center lg:px-8`}
       >
-        <div className='max-w-xl text-center sm:text-left text-black'>
-          <h1 className='text-3xl font-extrabold sm:text-5xl text-black'>
-            Let us make it your
-            <strong className='block font-extrabold text-rose-700'>
-              Forever Home.
+        <div className='max-w-xl text-center sm:text-left text-white'>
+          <h1 className='text-3xl font-extrabold sm:text-5xl '>
+            Dare to be
+            <strong className='block font-extrabold text-slate-800'>
+              Creative.
             </strong>
           </h1>
 
@@ -29,7 +29,7 @@ const BannerOne = () => {
             <a
               href='#'
               className={`flex justify-around px-3 py-3 text-sm font-medium text-white shadow 
-              rounded bg-rose-700 hover:bg-rose-500 w-[180px] hover:font-bold  `}
+              rounded bg-slate-700 hover:bg-slate-600 w-[180px] hover:font-bold  `}
             >
               <p>Explore Now</p>
               <AiOutlineArrowRight className='text-lg' />
@@ -38,7 +38,7 @@ const BannerOne = () => {
             <a
               href='#'
               className={`flex justify-around w-[180px] rounded bg-white px-3 py-3 text-sm font-medium
-               text-rose-500 shadow hover:text-rose-700 hover:font-bold  `}
+               text-slate-600 shadow hover:text-slate-700 hover:font-bold  `}
             >
               <p>Shop Now</p>
               <AiOutlineArrowRight className='text-lg' />
@@ -50,4 +50,4 @@ const BannerOne = () => {
   );
 };
 
-export default BannerOne;
+export default BannerTwo;
