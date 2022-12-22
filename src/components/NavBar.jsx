@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
 
+import { ReactComponent as StalexWhite } from "../images/svg/stalexWhite.svg";
 import { menus } from "../dummyData";
 
 const NavBar = () => {
@@ -12,9 +13,7 @@ const NavBar = () => {
         id='announcement'
         className={`bg-[#131313] flex items-center px-10 text-xs h-1/3  `}
       >
-        <div className='w-1/2 '>
-          <Link to={"/"}>Logo</Link>
-        </div>
+        <div className='w-1/2 '></div>
         <div className='w-1/2 flex justify-end gap-4  '>
           <div>Find a Store</div>
           <div>
@@ -31,7 +30,13 @@ const NavBar = () => {
         </div>
       </div>
       <div id='menu' className='flex px-10 py-2 w-full h-2/3 '>
-        <div className={`basis-[30%]`}>Logo</div>
+        <div
+          className={`basis-[30%] flex justify-start items-center lg:px-10 `}
+        >
+          <Link to={"/"}>
+            <StalexWhite className={`w-16 h-auto`} />
+          </Link>
+        </div>
         <div className={`basis-[40%] px-1 flex justify-evenly items-center  `}>
           {menus.map((menu) => (
             <div
